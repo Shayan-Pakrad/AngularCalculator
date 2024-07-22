@@ -1,0 +1,36 @@
+.calculator {
+    width: 500px;
+    background-color: rgb(163, 162, 162);
+    border-radius: 5px;
+    border: 1px solid black;
+    padding: 10px;
+}
+
+.upper-screen {
+    padding: 10px;
+    background-color:white;
+    border: 1px solid black;
+    font-size: x-large;
+    border-radius: 5px;
+}
+
+.lower-screen {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    font-size: xx-large;
+    border-radius: 5px;
+}
+
+.buttons {
+    margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.buttons button {
+    width: 25%;
+    height: 50px;
+}
