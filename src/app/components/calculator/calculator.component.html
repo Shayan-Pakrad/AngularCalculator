@@ -1,22 +1,22 @@
 <div class="calculator">
-    <div class="upper-screen">213 +</div>
-    <div class="lower-screen">324</div>
+    <div class="upper-screen">{{previousValue}} {{currentOperator}}</div>
+    <div class="lower-screen">{{currentValue}}</div>
     <div class="buttons">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>+</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>x</button>
-        <button>.</button>
-        <button>0</button>
-        <button>=</button>
-        <button>/</button>
+        <button (click)="digit('7')">7</button>
+        <button (click)="digit('8')">8</button>
+        <button (click)="digit('9')">9</button>
+        <button (click)="operator('+')">+</button>
+        <button (click)="digit('4')">4</button>
+        <button (click)="digit('5')">5</button>
+        <button (click)="digit('6')">6</button>
+        <button (click)="operator('-')">-</button>
+        <button (click)="digit('1')">1</button>
+        <button (click)="digit('2')">2</button>
+        <button (click)="digit('3')">3</button>
+        <button (click)="operator('x')">x</button>
+        <button (click)="digit('.')">.</button>
+        <button (click)="digit('0')">0</button>
+        <button (click)="equal()">=</button>
+        <button (click)="operator('/')">/</button>
     </div>
 </div>
