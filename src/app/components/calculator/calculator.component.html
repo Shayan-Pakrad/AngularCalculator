@@ -2,6 +2,10 @@
     <div class="upper-screen">{{previousValue}} {{currentOperator}}</div>
     <div class="lower-screen">{{currentValue}}</div>
     <div class="buttons">
+        <button (click)="power()">n²</button>
+        <button (click)="clear()">C</button>
+        <button (click)="deleteNumber()">D</button>
+        <button (click)="operator('/')">/</button>
         <button (click)="digit('7')">7</button>
         <button (click)="digit('8')">8</button>
         <button (click)="digit('9')">9</button>
@@ -14,9 +18,9 @@
         <button (click)="digit('2')">2</button>
         <button (click)="digit('3')">3</button>
         <button (click)="operator('x')">x</button>
-        <button (click)="digit('.')">.</button>
+        <button (click)="prefix()">+/-</button>
         <button (click)="digit('0')">0</button>
+        <button (click)="digit('.')">.</button>
         <button (click)="equal()">=</button>
-        <button (click)="operator('/')">/</button>
     </div>
 </div>

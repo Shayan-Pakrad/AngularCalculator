@@ -10,26 +10,26 @@ import { Component } from '@angular/core';
 
 export class CalculatorComponent {
 
-  digit(d:string) {
+  digit(d: string) {
 
     this.currentValue = this.currentValue + d;
 
     if (d != '.') {
       this.currentValue = Number(this.currentValue).toString();
     }
-    
+
   }
 
-  operator(o:string) {
+  operator(o: string) {
     this.currentOperator = o;
     this.previousValue = this.currentValue;
     this.currentValue = '0';
   }
 
   equal() {
-    const a:number = Number(this.currentValue);
-    const b:number = Number(this.previousValue);
-    let result:number = 0;
+    const a: number = Number(this.currentValue);
+    const b: number = Number(this.previousValue);
+    let result: number = 0;
 
     switch (this.currentOperator) {
       case '+':
@@ -47,12 +47,30 @@ export class CalculatorComponent {
       case 'x':
         result = a * b;
         break;
-    
+
       default:
         break;
     }
 
-    this.currentValue = result.toString()
+    this.currentValue = result.toString();
+  }
+
+  prefix() {
+    this.currentValue = (Number(this.currentValue) * -1).toString();
+  }
+
+  power() {
+    this.currentValue = (Number(this.currentValue) ** 2).toString();
+  }
+
+  clear() {
+    this.currentOperator = '';
+    this.currentValue = '0';
+    this.previousValue = '0';
+  }
+
+  deleteNumber() {
+    this.currentValue = Number(this.currentValue.slice(0, -1)).toString();
   }
 
   previousValue: string = '0';
